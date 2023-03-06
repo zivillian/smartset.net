@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>smartset.net</id>
-    <version>3.0.52</version>
+    <version>3.0.52.1</version>
     <authors>lucon GmbH</authors>
     <projectUrl>https://github.com/zivillian/smartset.net</projectUrl>
     <description>.net Binaries extracted from Wolf Smartset apk</description>
