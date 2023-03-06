@@ -14,6 +14,11 @@
   .publickeytoken = (AD B9 79 38 29 DD AE 60 )                         // ..y8)..`
   .ver 6:0:0:0
 }
+.assembly extern System.Runtime
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 6:0:0:0
+}
 .assembly extern Wolf.SocketServer.ISMInterface
 {
   .ver 3:2:5:0
@@ -4354,7 +4359,7 @@
     .field public int32 '<>1__state'
     .field public valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder '<>t__builder'
     .field public class LuCon.SocketServer.SocketServerBase.BundleQueueWorker '<>4__this'
-    .field private valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> '<>u__1'
+    .field private valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> '<>u__1'
     .method private hidebysig newslot virtual final 
             instance void  MoveNext() cil managed
     {
@@ -4364,8 +4369,8 @@
       .locals init (int32 V_0,
                class LuCon.SocketServer.SocketServerBase.BundleQueueWorker V_1,
                class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest V_2,
-               valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> V_3,
-               valuetype [mscorlib]System.Threading.Tasks.ValueTask`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> V_4,
+               valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> V_3,
+               valuetype [System.Runtime]System.Threading.Tasks.ValueTask`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> V_4,
                class [mscorlib]System.Exception V_5,
                class [mscorlib]System.Exception V_6,
                class [mscorlib]System.Exception V_7)
@@ -4392,13 +4397,13 @@
           IL_001f:  ldloc.1
           IL_0020:  ldfld      class [mscorlib]System.Threading.CancellationTokenSource LuCon.SocketServer.SocketServerBase.BundleQueueWorker::_ctsStreamDisconnect
           IL_0025:  callvirt   instance valuetype [mscorlib]System.Threading.CancellationToken [mscorlib]System.Threading.CancellationTokenSource::get_Token()
-          IL_002a:  callvirt   instance valuetype [mscorlib]System.Threading.Tasks.ValueTask`1<!0> class [System.Threading.Channels]System.Threading.Channels.ChannelReader`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::ReadAsync(valuetype [mscorlib]System.Threading.CancellationToken)
+          IL_002a:  callvirt   instance valuetype [System.Runtime]System.Threading.Tasks.ValueTask`1<!0> class [System.Threading.Channels]System.Threading.Channels.ChannelReader`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::ReadAsync(valuetype [mscorlib]System.Threading.CancellationToken)
           IL_002f:  stloc.s    V_4
           IL_0031:  ldloca.s   V_4
-          IL_0033:  call       instance valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<!0> valuetype [mscorlib]System.Threading.Tasks.ValueTask`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::GetAwaiter()
+          IL_0033:  call       instance valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<!0> valuetype [System.Runtime]System.Threading.Tasks.ValueTask`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::GetAwaiter()
           IL_0038:  stloc.3
           IL_0039:  ldloca.s   V_3
-          IL_003b:  call       instance bool valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::get_IsCompleted()
+          IL_003b:  call       instance bool valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::get_IsCompleted()
           IL_0040:  brtrue.s   IL_0081
 
           IL_0042:  ldarg.0
@@ -4408,28 +4413,28 @@
           IL_0046:  stfld      int32 LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>1__state'
           IL_004b:  ldarg.0
           IL_004c:  ldloc.3
-          IL_004d:  stfld      valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
+          IL_004d:  stfld      valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
           IL_0052:  ldarg.0
           IL_0053:  ldflda     valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>t__builder'
           IL_0058:  ldloca.s   V_3
           IL_005a:  ldarg.0
-          IL_005b:  call       instance void [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>,valuetype LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'>(!!0&,
+          IL_005b:  call       instance void [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>,valuetype LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'>(!!0&,
                                                                                                                                                                                                                                                                                                                                                                                               !!1&)
           IL_0060:  leave      IL_014d
 
           IL_0065:  ldarg.0
-          IL_0066:  ldfld      valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
+          IL_0066:  ldfld      valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
           IL_006b:  stloc.3
           IL_006c:  ldarg.0
-          IL_006d:  ldflda     valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
-          IL_0072:  initobj    valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>
+          IL_006d:  ldflda     valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest> LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>u__1'
+          IL_0072:  initobj    valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>
           IL_0078:  ldarg.0
           IL_0079:  ldc.i4.m1
           IL_007a:  dup
           IL_007b:  stloc.0
           IL_007c:  stfld      int32 LuCon.SocketServer.SocketServerBase.BundleQueueWorker/'<RunLoopAsync>d__36'::'<>1__state'
           IL_0081:  ldloca.s   V_3
-          IL_0083:  call       instance !0 valuetype [mscorlib]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::GetResult()
+          IL_0083:  call       instance !0 valuetype [System.Runtime]System.Runtime.CompilerServices.ValueTaskAwaiter`1<class [Wolf.SocketServer.ISMInterface]Wolf.SocketServer.ISMInterface.TelegrBundleRequest>::GetResult()
           IL_0088:  stloc.2
           IL_0089:  ldloc.1
           IL_008a:  ldfld      class [mscorlib]System.Action`3<object,class [mscorlib]System.Type,valuetype [LuCon.SocketServer.GatewayInterface]LuCon.SocketServer.GatewayInterface.EnXmlInterfaceType> LuCon.SocketServer.SocketServerBase.BundleQueueWorker::_writeFunc
@@ -44389,12 +44394,12 @@
   {
     // Code size       66 (0x42)
     .maxstack  3
-    .locals init (valuetype [mscorlib]System.HashCode V_0,
+    .locals init (valuetype [System.Runtime]System.HashCode V_0,
              uint16[] V_1,
              int32 V_2,
              uint16 V_3)
     IL_0000:  ldloca.s   V_0
-    IL_0002:  initobj    [mscorlib]System.HashCode
+    IL_0002:  initobj    [System.Runtime]System.HashCode
     IL_0008:  ldarg.0
     IL_0009:  call       instance uint16[] LuCon.SocketServer.SocketServerBase.InfonumberAddress::get_InfoNumbers()
     IL_000e:  stloc.1
@@ -44408,7 +44413,7 @@
     IL_0016:  stloc.3
     IL_0017:  ldloca.s   V_0
     IL_0019:  ldloc.3
-    IL_001a:  call       instance void [mscorlib]System.HashCode::Add<uint16>(!!0)
+    IL_001a:  call       instance void [System.Runtime]System.HashCode::Add<uint16>(!!0)
     IL_001f:  ldloc.2
     IL_0020:  ldc.i4.1
     IL_0021:  add
@@ -44424,8 +44429,8 @@
     IL_002f:  ldarg.0
     IL_0030:  call       instance valuetype [mscorlib]System.Nullable`1<uint16> LuCon.SocketServer.SocketServerBase.InfonumberAddress::get_ServiceNr()
     IL_0035:  ldloca.s   V_0
-    IL_0037:  call       instance int32 [mscorlib]System.HashCode::ToHashCode()
-    IL_003c:  call       int32 [mscorlib]System.HashCode::Combine<uint16,valuetype [mscorlib]System.Nullable`1<uint16>,int32>(!!0,
+    IL_0037:  call       instance int32 [System.Runtime]System.HashCode::ToHashCode()
+    IL_003c:  call       int32 [System.Runtime]System.HashCode::Combine<uint16,valuetype [mscorlib]System.Nullable`1<uint16>,int32>(!!0,
                                                                                                                               !!1,
                                                                                                                               !!2)
     IL_0041:  ret
