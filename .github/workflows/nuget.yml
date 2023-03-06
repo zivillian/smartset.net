@@ -22,5 +22,7 @@ jobs:
         run: dotnet restore
       - name: Pack nuget package
         run: dotnet pack --no-build -o .
-      - name: push nuget package
-        run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/zivillian/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/upload-artifact@v3
+      with:
+        name: nuget
+        path: *.nuget
