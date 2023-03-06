@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore
       - name: Pack nuget package
         run: dotnet pack --no-build -o .
-    - uses: actions/upload-artifact@v3
-      with:
-        name: nuget
-        path: *.nuget
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget
+          path: *.nuget
