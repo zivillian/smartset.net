@@ -2,11 +2,11 @@
 <package >
   <metadata>
     <id>smartset.net</id>
-    <version>3.0.52.1</version>
+    <version>4.0.7</version>
     <authors>lucon GmbH</authors>
     <projectUrl>https://github.com/zivillian/smartset.net</projectUrl>
     <description>.net Binaries extracted from Wolf Smartset apk</description>
-    <copyright>Copyright © lucon GmbH 2019</copyright>
+    <copyright>Copyright © Wolf GmbH 2023</copyright>
     <repository type="git" url="https://github.com/zivillian/smartset.net.git" branch="main" />
     <dependencies>
       <group targetFramework="netstandard2.1" />
